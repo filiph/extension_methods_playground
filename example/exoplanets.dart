@@ -2,7 +2,11 @@ import 'package:meta/meta.dart';
 import 'package:nasa_exoplanets/nasa_exoplanets.dart';
 
 extension BetterExoplanet on Exoplanet {
+  static Exoplanet tatooine = Exoplanet(name: 'Tatooine');
+
   double get temperatureInCelsius => kelvinToCelsius(temperature);
+
+  List<Exoplanet> operator +(Exoplanet other) => [this, other];
 
   bool get isHabitable => checkHabitable(this);
 
