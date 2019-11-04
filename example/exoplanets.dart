@@ -95,5 +95,5 @@ class Distance {
 }
 
 extension on Duration {
-  int get inYears => (inDays / 365).floor();
+  int get inYears => inDays ~/ 365;
 }
